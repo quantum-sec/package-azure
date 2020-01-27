@@ -1,0 +1,18 @@
+{
+  "name": "@quantum-sec/package-azure",
+  "version": "0.0.0-development",
+  "private": true,
+  "description": "Contains modules for deploying and managing Azure infrastructure.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:quantum-sec/package-azure.git"
+  },
+  "author": "Quantum Security Pte. Ltd.",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "@quantum-sec/quantum-changelog-convention": "^1.0.0",
+    "@semantic-release/git": "^8.0.0",
+    "marked": "^0.7.0",
+    "semantic-release": "~16.0.1"
+  }
+}
