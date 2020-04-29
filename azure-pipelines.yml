@@ -13,8 +13,4 @@ resources:
       name: quantum-sec/pipeline-library
 
 jobs:
-  - template: templates/validation/pre-commit.yml@pipeline-library
-  - template: templates/versioning/semantic-release.yml@pipeline-library
-    parameters:
-      dependsOn:
-        - PreCommit
+  - template: templates/jobs/default.yml@pipeline-library
