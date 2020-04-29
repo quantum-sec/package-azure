@@ -8,12 +8,5 @@
     "url": "git@github.com:quantum-sec/package-azure.git"
   },
   "author": "Quantum Security Pte. Ltd.",
-  "license": "SEE LICENSE IN LICENSE",
-  "devDependencies": {
-    "@quantum-sec/quantum-changelog-convention": "^1.0.0",
-    "@quantum-sec/semantic-release-config": "^1.0.1",
-    "@semantic-release/git": "^8.0.0",
-    "marked": "^0.7.0",
-    "semantic-release": "~16.0.1"
-  }
+  "license": "SEE LICENSE IN LICENSE"
 }
