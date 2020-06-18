@@ -6,7 +6,7 @@ terraform {
   required_version = ">= 0.12"
 }
 
-resource "azurerm_template_deployment" "lighthouse" {
+resource "azurerm_template_deployment" "arm" {
   name                = var.name
   resource_group_name = var.resource_group_name
   deployment_mode     = var.deployment_mode

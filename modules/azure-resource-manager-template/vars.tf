@@ -1,10 +1,10 @@
 variable "name" {
-  description = "The name to be assigned to logic app templates created."
+  description = "The name to be assigned to resource  created using ARM template."
   type        = string
 }
 
 variable "resource_group_name" {
-  description = "The name of the resource group in which this logic app templates will be deployed."
+  description = "The name of the resource group in which this resource will be deployed."
   type        = string
 }
 
@@ -14,11 +14,11 @@ variable "deployement_mode" {
 }
 
 variable "sub_id" {
-  description = "This is the subscription ID for azure instance in which logic apps are to be deployed."
+  description = "This is the subscription ID for azure instance in which resources are to be deployed."
   type        = string
 }
 
 variable "template_body" {
-  description = "Azure resource manager template for lighthouse deployement."
+  description = "JSON payload for Azure resource manager template deployement."
   type        = string
 }
