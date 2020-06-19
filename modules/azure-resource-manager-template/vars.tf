@@ -8,7 +8,7 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "deployement_mode" {
+variable "deployment_mode" {
   description = "Specifies the mode that is used to deploy resources. One of `Incremental` or `Complete`"
   type        = string
 }
