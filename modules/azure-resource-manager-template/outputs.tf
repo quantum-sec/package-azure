@@ -1,3 +1,3 @@
 output "id" {
-  value = azurerm_template_deployment.arm.id
+  value = azurerm_template_deployment.deployment.id
 }
