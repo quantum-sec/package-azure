@@ -10,7 +10,7 @@ resource "azurerm_template_deployment" "deployment" {
   name                = var.name
   resource_group_name = var.resource_group_name
   deployment_mode     = var.deployment_mode
-  paramters           = var.paramters
-  paramters_body      = var.paramters_body
+  parameters          = var.parameters
+  parameters_body     = var.parameters_body
   template_body       = var.template_body
 }
