@@ -24,6 +24,6 @@ variable "parameters" {
 }
 
 variable "parameters_body" {
-  description = "(Optional) Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references."
+  description = "Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references."
   type        = map(string)
 }
