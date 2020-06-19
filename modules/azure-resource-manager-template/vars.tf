@@ -15,7 +15,7 @@ variable "deployment_mode" {
 
 variable "template_body" {
   description = "The JSON payload for Azure Resource Manager template to be deployed"
-  type        = map(string)
+  type        = string
 }
 
 variable "parameters" {
@@ -25,5 +25,5 @@ variable "parameters" {
 
 variable "parameters_body" {
   description = "Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references."
-  type        = map(string)
+  type        = string
 }
