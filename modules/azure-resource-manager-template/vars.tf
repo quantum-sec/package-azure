@@ -19,7 +19,7 @@ variable "template_body" {
 }
 
 variable "parameters" {
-  description = "(Optional) Specifies the name and value pairs that define the deployment parameters for the template."
+  description = "Specifies the name and value pairs that define the deployment parameters for the template."
   type        = map(string)
 }
 
