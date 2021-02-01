@@ -1,14 +1,24 @@
-variable "resource_group_name" {
-  description = "The name of the resource group in which this resource will be provisioned."
-  type        = string
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Use the latest azurerm provider with features enabled
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+provider "azurerm" {
+  alias = "rscgrp"
+  features {}
 }
 
-variable "resource_name" {
-  description = "The name of the resource to be added to the resource group."
-  type        = string
-}
+# ---------------------------------------------------------------------------------------------------------------------
+# Create resource from arm script
+# ---------------------------------------------------------------------------------------------------------------------
 
-variable "arm_file" {
-  description = "The location of the ARM script that would be used"
-  type        = string
+resource "azurerm_resource_group_template_deployment" "resource_group_deploy" {
+  provider = azurerm.rscgrp
+
+  name                = var.resource_name
+  resource_group_name = var.resource_group_name
+  deployment_mode     = "Incremental"
+
+  template_content = file(var.arm_file)
+
+  parameters_content = jsonencode(var.parameter_value)
 }
