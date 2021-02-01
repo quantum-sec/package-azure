@@ -3,6 +3,11 @@ variable "resource_group_name" {
   type        = string
 }
 
+variable "deployment_mode" {
+  description = "Specifies the mode that is used to deploy resources"
+  type        = string
+}
+
 variable "name" {
   description = "The name which should be used for this Resource Group Template Deployment"
   type        = string
