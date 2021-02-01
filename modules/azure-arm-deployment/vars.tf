@@ -8,7 +8,7 @@ provider "azurerm" {
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
-# Create Sentinel API connector and logic app workflow
+# Create resource from arm script
 # ---------------------------------------------------------------------------------------------------------------------
 
 resource "azurerm_resource_group_template_deployment" "resource_group_deploy" {
