@@ -3,18 +3,18 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "resource_name" {
-  description = "The name of the resource to be added to the resource group."
+variable "name" {
+  description = "The name which should be used for this Resource Group Template Deployment"
   type        = string
 }
 
-variable "arm_file" {
-  description = "The location of the ARM script that would be used"
+variable "arm_script" {
+  description = "The contents of the ARM Template which should be deployed into this Resource Group"
   type        = string
 }
 
-variable "parameter_value" {
-  description = "Custom variables/values that would be added to arm parameters"
+variable "parameters_override" {
+  description = "The contents of the ARM Template parameters file - containing a JSON list of parameters"
   type        = map
   default     = {}
 }

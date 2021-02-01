@@ -1,24 +1,23 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Use the latest azurerm provider with features enabled
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-provider "azurerm" {
-  alias = "rscgrp"
-  features {}
-}
-
 # ---------------------------------------------------------------------------------------------------------------------
 # Create resource from arm script
 # ---------------------------------------------------------------------------------------------------------------------
 
-resource "azurerm_resource_group_template_deployment" "resource_group_deploy" {
-  provider = azurerm.rscgrp
+terraform {
+  required_version = ">= 0.12"
 
-  name                = var.resource_name
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 2.38"
+    }
+  }
+}
+
+resource "azurerm_resource_group_template_deployment" "resource_group_deploy" {
+  name                = var.name
   resource_group_name = var.resource_group_name
   deployment_mode     = "Incremental"
 
-  template_content = file(var.arm_file)
-
-  parameters_content = jsonencode(var.parameter_value)
+  template_content   = var.arm_script
+  parameters_content = jsonencode(var.parameters_override)
 }
