@@ -1,4 +1,4 @@
-module "resource_group" {
+module "deploy_web_app_sample" {
   source = "../../modules/azure-arm-deployment"
 
   name                = var.name
@@ -7,5 +7,7 @@ module "resource_group" {
 
   arm_script = file("${path.module}/${var.arm_script}")
 
-  parameters_override = var.parameters_override
+  parameters_override = {
+    webAppName = { value = var.web_app_name }
+  }
 }

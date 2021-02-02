@@ -22,8 +22,8 @@ variable "arm_script" {
   default     = "webapp.json"
 }
 
-variable "parameters_override" {
-  description = "This will be the name of the resource pass into the parameter webAppName declared inside the arm_script."
-  type        = map(any)
-  default     = { webAppName = { value = "dummyweb-example" } }
+variable "web_app_name" {
+  description = "This will be the name of the web app resource that we would be creating."
+  type        = string
+  default     = "dummyweb-example"
 }
