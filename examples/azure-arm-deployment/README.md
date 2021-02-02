@@ -7,7 +7,7 @@ to the ARM template using the parameter_override variable.
 In this example, we would be deploying a simple web application. The terraform script flow is as follows:
 1. Load the webapp.json file which is declared in arm_script variable
 2. From the variable parameters_override
-```JSON
+```
 # Located in vars.tf
 variable "parameters_override" {
   description = "This will be the name of the resource pass into the parameter webAppName declared inside the arm_script."
@@ -22,7 +22,7 @@ it would set the values inside the variable `webAppName` parameter field of the 
 # Located in webapp.json
 "parameters": {
     "webAppName": { "type": "String" },
-    .......
+    # ....... trucated .......
   }
 ```
 
