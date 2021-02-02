@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "webAppName": { "type": "String" },
+    "virtualApplications":{
+      "type": "array",
+      "defaultValue":
+      [
+        {
+          "virtualPath": "/",
+          "physicalPath": "site\\wwwroot",
+          "preloadEnabled": false,
+          "virtualDirectories": null
+        }
+      ]
+    }
+  },
+  "variables": {},
+  "resources":
+  [
+    {
+      "type": "Microsoft.Web/sites/config",
+      "name": "[concat(parameters('webAppName'), '/web')]",
+      "apiVersion": "2020-06-01",
+      "properties": { "virtualApplications": "[parameters('virtualApplications')]" },
+      "dependsOn": []
+    }
+  ]
+}
