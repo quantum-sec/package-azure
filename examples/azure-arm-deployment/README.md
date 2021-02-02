@@ -22,7 +22,7 @@ it would set the values inside the variable `webAppName` parameter field of the 
 # Located in webapp.json
 "parameters": {
     "webAppName": { "type": "String" },
-    # ....... trucated .......
+    # ....... truncated .......
   }
 ```
 
