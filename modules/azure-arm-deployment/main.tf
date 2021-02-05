@@ -20,5 +20,5 @@ resource "azurerm_resource_group_template_deployment" "resource_group_deploy" {
   deployment_mode     = var.deployment_mode
 
   template_content   = var.arm_script
-  parameters_content = jsonencode(var.parameters_override)
+  parameters_content = jsonencode({ for k, v in var.parameters_override : k => { value = v } })
 }
