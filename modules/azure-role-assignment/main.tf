@@ -10,13 +10,15 @@ data "azurerm_resource_group" "current" {
   name = "quantum-log-analytics"
 }
 
-
-data "azurerm_role_definition" "builtin" {
-  name = "Microsoft Sentinel Automation Contributor"
-}
-
 resource "azurerm_role_assignment" "assignment" {
-  scope              = data.azurerm_resource_group.current.id
-  role_definition_id = data.azurerm_role_definition.builtin.id
-  principal_id       = var.principal_id
+  name                                   = var.name
+  scope                                  = var.scope
+  role_definition_id                     = var.role_definition_id
+  role_definition_name                   = var.role_definition_name
+  principal_id                           = var.principal_id
+  description                            = var.description
+  skip_service_principal_aad_check       = var.skip_service_principal_aad_check
+  condition                              = var.condition
+  condition_version                      = var.condition_version
+  delegated_managed_identity_resource_id = var.delegated_managed_identity_resource_id
 }
