@@ -6,10 +6,6 @@ terraform {
   required_version = ">= 0.12"
 }
 
-data "azurerm_resource_group" "current" {
-  name = "quantum-log-analytics"
-}
-
 resource "azurerm_role_assignment" "assignment" {
   name                                   = var.name
   scope                                  = var.scope
