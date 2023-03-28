@@ -1,9 +1,3 @@
-variable "role_definition_id" {
-  description = "The ID of the role definition for which this Lighthouse delegation will grant to the management partner."
-  type        = string
-  default     = "b24988ac-6180-42a0-ab88-20f7382dd24c" # Contributor
-}
-
 variable "name" {
   description = "The name of the Lighthouse delegation."
   type        = string
