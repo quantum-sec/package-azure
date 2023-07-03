@@ -21,7 +21,6 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azurerm_role_assignment.azure_role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
 | [azurerm_user_assigned_identity.azure_managed_identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
 
 ## Inputs
@@ -31,8 +30,6 @@ No modules.
 | <a name="input_location"></a> [location](#input\_location) | The Azure region in which this Azure Logic App workflow will be deployed. | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The Azure region in which this Azure Logic App workflow will be deployed. | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which this resource will be provisioned. | `string` | n/a | yes |
-| <a name="input_role_definition_name"></a> [role\_definition\_name](#input\_role\_definition\_name) | The name of a built-in Role. | `string` | n/a | yes |
-| <a name="input_scope"></a> [scope](#input\_scope) | The scope at which the Role Assignment applies to. | `string` | n/a | yes |
 
 ## Outputs
 
