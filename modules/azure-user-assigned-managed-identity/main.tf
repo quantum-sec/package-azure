@@ -1,6 +1,5 @@
 terraform {
-  # nonsensitive() requires >= 0.15
-  required_version = ">= 0.15"
+  required_version = ">= 1.2"
 
   required_providers {
     azurerm = {
